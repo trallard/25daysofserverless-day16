@@ -18,4 +18,4 @@ jobs:
         with:
           azcliversion: latest
           inlineScript: |
-            az storage blob upload --file $GITHUB_WORKSPACE/posadas/data/*.json --connection-string ${{ secrets.ConnectionString }} --name posadastrallard --container-name ${{secrets.container}}
+            az storage blob upload -f $GITHUB_WORKSPACE/posadas/data/*.json -n locations -c ${{ secrets.container }} --connection-string ${{ secrets.ConnectionString }}
