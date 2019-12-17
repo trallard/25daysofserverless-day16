@@ -18,9 +18,11 @@ This challenge and the solutions are part of the [#25DaysOfServerless](https://2
 Sample outputs:
 
 - All dates query
+
 ![day query](assets/api.png)
 
 - Single date query
+
 ![day query](assets/api2.png)
 
 
