@@ -23,6 +23,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
 
 def json_locations():
+    """Function to parse the json file with the locations,
+    we use Pathlib to resolve the full path of the file
+    """
     loc_path = Path("./posadas/data/locations.json").resolve()
     with open(loc_path, "r") as json_file:
         locations = json.load(json_file)
@@ -30,6 +33,10 @@ def json_locations():
 
 
 def get_loc(day, locations):
+    """This function searches for the location corresponding to the 
+    query day. 
+    We need to make sure the dates are actually converted into datetime objs.
+    """
     for posada in locations:
         date = datetime.datetime.strptime(posada.get("date"), "%B %d, %Y").date()
         if date.day == int(day):
