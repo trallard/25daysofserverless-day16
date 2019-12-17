@@ -1,0 +1,14 @@
+name: Upload To Azure Blob Storage
+on: push
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: bacongobbler/azure-blob-storage-upload@v1.0.0
+        with:
+          source_dir: ./posadas/data/
+          container_name: trallardcontainer
+          connection_string: ${{ secrets.ConnectionString }}
+          extra_args: "--pattern *.json"
