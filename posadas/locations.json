@@ -29,6 +29,16 @@
                 "lon": 19.3232,
                 "lat": 99.1493
             }
+        },
+        {
+            "name": "Casa Azul",
+            "date": "December 19, 2019",
+            "host": "Tania Allard",
+            "type": "geopoint",
+            "location": {
+                "lon": 19.3552,
+                "lat": 99.1652
+            }
         }
     ]
 }
