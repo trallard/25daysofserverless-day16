@@ -26,7 +26,7 @@ def json_locations():
     """Function to parse the json file with the locations,
     we use Pathlib to resolve the full path of the file
     """
-    loc_path = Path("./posadas/data/locations.json")
+    loc_path = Path("./locations.json")
     with open(loc_path, "r") as json_file:
         locations = json.load(json_file)
     return locations.get("locations")
