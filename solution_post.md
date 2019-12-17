@@ -1,9 +1,9 @@
 ---
 title: Let the posadas begin - Day 16 of the #25DaysOfServerles challenge
-published: false
+published: true
 cover_image: https://thepracticaldev.s3.amazonaws.com/i/6z5dct67wfpfbxnmivht.jpg
-description: TODO:CHALLENGE DESCRIPTION HERE
-tags: 25daysofserverless, serverless, azure, Python, continuous integration, continuous delivery, GitHub actions
+description: Create a CI/CD pipeline for Azure Functions
+tags: 25daysofserverless, serverless, azure, Python
 ---
 
 This article is part of [#25DaysOfServerless](https://25daysofserverless.com). New challenges will be published every day from Microsoft Cloud Advocates throughout the month of December. Find out more about how Microsoft Azure enables your [Serverless functions](https://docs.microsoft.com/azure/azure-functions/?WT.mc_id=25days_devto-blog-cxa).
@@ -117,14 +117,14 @@ The code above allows the user to:
 After testing locally running `func host start` and making sure everything was working, I deployed my function app to Azure. I like using the Azure CLI for this kind of things (again a step-by-step can be found [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-python/?WT.mc_id=25days_devto-blog-cxa)).
 If you have the Azure Functions extension for VS Code Installed, you can publish your app directly from there too, and it will save you some time.
 
-After deploying, I made sure that my function by performing a GET request:
+After deploying, I made sure that my function was working correctly by performing a GET request:
 
 ![api call](https://github.com/trallard/25daysofserverless-challenges/blob/master/assets/api.png?raw=true)
 
 Once the function is deployed, we can go ahead and create the CI/CD pipeline. For this challenge, I decided to use [GitHub actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions). To do so, we need to follow the next steps:
 1. Create a [service principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object/?WT.mc_id=25days_devto-blog-cxa). This will allow us to deploy our function using GitHub actions. 
  If you are using your command line with the Azure CLI or the Azure Cloud shell, you can use the following command:
- ```
+ ```sh
  az ad sp create-for-rbac --name "myApp" \
  --role contributor \
  --scopes /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.Web/sites/<APP_NAME> --sdk-auth
@@ -139,7 +139,7 @@ I am going to explain the content, so you know what this is doing.
 
 We want the pipeline to trigger at a push on the master branch. Also, we first need to check out our repository, so we use `actions/checkout@master`.
 
-```
+```yaml
 name: Python function
 
 on:
@@ -156,7 +156,7 @@ jobs:
 ```
 Next, we login to Azure and set our Python environment. Here is where you also install dependencies.
 
-```
+```yaml
  - name: "Login via Azure CLI"
  uses: azure/login@v1
  with:
@@ -177,7 +177,7 @@ Next, we login to Azure and set our Python environment. Here is where you also i
 ```
 
 Finally we publish our function:
-```
+```yaml
  - name: "Run Azure Functions Action"
  uses: Azure/functions-action@v1
  id: fa
@@ -194,9 +194,11 @@ Finally, you can make an update to the locations file, wait for the deployment t
 
 ![api updated](https://raw.githubusercontent.com/trallard/25daysofserverless-challenges/master/assets/api2.png)
 
-You can see the final Python Http Triggered function as well as the GitHub actions workflows in the [GitHub repository](https://github.com/trallard/25daysofserverless-challenges).
-
 Success!
+
+You can see the final Python Http Triggered function as well as the GitHub actions workflows in the [GitHub repository](https://github.com/trallard/25daysofserverless-challenges) shall you need more inspiration.
+
+
 
 <hr/>
 Want to submit your solution to this challenge? Build a solution locally and then [submit an issue](https://github.com/microsoft/25-days-of-serverless/issues/new?assignees=&labels=challenge-submission&template=challenge-solution-submission.md&title=%5BCHALLENGE+SUBMISSION%5D+). If your solution doesn't involve code you can record a short video and submit it as a link in the issue desccription. Make sure to tell us which challenge the solution is for. We're excited to see what you build! Do you have comments or questions? Add them to the comments area below.
