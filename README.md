@@ -61,7 +61,7 @@ Sample outputs:
 
 Learn more about serverless with Free Training! 
 
-- ✅ **[Serverless Free Courses](https://docs.microsoft.com/learn/browse/?term=azure functions&WT.mc_id=academic-0000-taallard)** 
+- ✅ **[Serverless Free Courses](https://docs.microsoft.com/learn/browse/?term=azure&WT.mc_id=academic-0000-taallard functions&WT.mc_id=academic-0000-taallard)** 
 
 ## License 📖
 
