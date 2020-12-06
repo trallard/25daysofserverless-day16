@@ -42,26 +42,26 @@ Sample outputs:
 ## Resources/Tools Used 🚀
 
 ### Getting started with Azure Functions for Python
-* **[Azure Functions Python](https://docs.microsoft.com/azure/azure-functions/functions-reference-python?WT.mc_id=25daysofserverless-github-cxa)**
+* **[Azure Functions Python](https://docs.microsoft.com/azure/azure-functions/functions-reference-python?WT.mc_id=academic-0000-taallard)**
 
 ### Continuous integration and delivery 
 * **[GitHub Actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions)**
-* **[Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/?view=azure-devops/?WT.mc_id=25daysofserverless-github-cxa)**
-* **[Getting started with Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python?view=azure-devops?WT.mc_id=25daysofserverless-github-cxa)**
-* **[Azure Functions Continuous delivery using Azure DevOps](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-azure-devops/?WT.mc_id=25daysofserverless-github-cxa)**
-* **[Azure FunctionsContinuous delivery using GitHub actions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-github-actions/?WT.mc_id=25daysofserverless-github-cxa)**
+* **[Azure DevOps](https://docs.microsoft.com/azure/devops/?view=azure-devops%2F%3FWT.mc_id%3D25daysofserverless-github-cxa&WT.mc_id=academic-0000-taallard)**
+* **[Getting started with Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/python?view=azure-devops%3FWT.mc_id%3D25daysofserverless-github-cxa&WT.mc_id=academic-0000-taallard)**
+* **[Azure Functions Continuous delivery using Azure DevOps](https://docs.microsoft.com/azure/azure-functions/functions-how-to-azure-devops/?WT.mc_id=academic-0000-taallard)**
+* **[Azure FunctionsContinuous delivery using GitHub actions](https://docs.microsoft.com/azure/azure-functions/functions-how-to-github-actions/?WT.mc_id=academic-0000-taallard)**
 
 
 ### Developer Tools
-* **[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=25daysofserverless-github-cxa)** 
-* **[Visual Studio Code Azure Functions Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions&WT.mc_id=25daysofserverless-github-cxa)** 
-* **[Visual Studio Code Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=25daysofserverless-github-cxa)**
+* **[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-0000-taallard)** 
+* **[Visual Studio Code Azure Functions Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions&WT.mc_id=academic-0000-taallard)** 
+* **[Visual Studio Code Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-0000-taallard)**
 
 ## Next Steps 🏃
 
 Learn more about serverless with Free Training! 
 
-- ✅ **[Serverless Free Courses](https://docs.microsoft.com/learn/browse/?term=azure%20functions&WT.mc_id=25daysofserverless-github-cxa)** 
+- ✅ **[Serverless Free Courses](https://docs.microsoft.com/learn/browse/?term=azure&WT.mc_id=academic-0000-taallard functions&WT.mc_id=academic-0000-taallard)** 
 
 ## License 📖
 
